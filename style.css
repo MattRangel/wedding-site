@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("./fonts/liberation-serif/LiberationSerif-Regular.ttf");
+}
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+body {
+  --header-height: 5rem;
+}
+
+body {
+  margin: 8px 0;
+  font-family: "Liberation Serif", serif;
+  font-size: 1.2rem;
+  background-color: #a4bbff;
+}
+
+body::before {
+  display: inline-block;
+  content: "\00a0";
+  scroll-snap-align: start;
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+  font-variant-caps: small-caps;
+  top: 0;
+}
+
+section {
+  margin: 0 2vw;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  border-image: url('/media/Border1.svg');
+}
+
+@media (orientation: landscape) and (min-height: 37.5rem) {
+  h1, #tabs {
+    position: sticky;
+    background-color: inherit;
+    width: 100vw;
+  }
+
+  header {
+    position: sticky;
+    top: calc((100vh - var(--header-height)) * -1);
+  }
+
+  section {
+    padding-top: var(--header-height);
+  }
+}
+
+header {
+  background-color: inherit;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#header-image {
+  height: 15rem;
+}
+
+#tabs {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  top: 3rem;
+}
+
+#tabs a {
+  text-decoration: none;
+  color: black;
+  padding: 0 .5rem;
+  cursor: pointer;
+}
+
+#tabs a:hover {
+  border-bottom: solid black .1rem;
+  font-weight: 500;
+}
+
+#tabs a:active {
+  border-bottom: solid black .15rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0;
+  font-variant-caps: small-caps;
+}
+
+h2 > a {
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+#color-pallet {
+  display: grid;
+  grid-template-columns: repeat(6, 7rem);
+  justify-content: center;
+  margin: .5rem auto;
+  width: min-content;
+  outline: solid white .3rem;
+}
+
+@media (orientation: portrait) or (max-width: 43rem) {
+  #color-pallet {
+    grid-template-columns: repeat(3, min(5rem, 32vw));
+  }
+}
+
+#color-pallet > div {
+  aspect-ratio: 1/1;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  display: none;
+  max-height: 14rem;
+  max-width: 90vw;
+}
+
+.gallery  .selected {
+  display: inline-block;
+}
+
+.gallery button {
+  font-size: 2.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 5rem 10rem 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-height: 14rem;
+}
+
+@media (max-width: 20rem) {
+  .gallery {
+    grid-template-columns: unset;
+  }
+}
+
+.gallery button {
+  background: none;
+  border: none;
+}
+
+.gallery button:hover {
+  cursor: pointer;
+}
+
+#location .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#location .content > * {
+  flex: 1 0 15rem;
+}
+
+#map {
+  min-height: 20rem;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>M & R</title>
+</head>
+<body>
+  <header>
+    <img src="./media/farmbarn-cropped.svg" alt="" id="header-image">
+    <h1>Matt & Ruth</h1>
+    <p>June 14, 2025 - Belton, TX</p>
+    <p id="countdown">X days away!</p>
+    <ul id="tabs">
+      <li><a href="#" class="selected">Home</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#location">Location / Travel</a></li>
+      <li><a href="#dress">Dress Code</a></li>
+      <li><a href="#registry">Registry</a></li>
+    </ul>
+  </header>
+    <section id="rsvp">
+      <h2>RSVP<a href="#">↑</a></h2>
+      <iframe data-tally-src="https://tally.so/embed/wbNQ91?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="325" frameborder="0" marginheight="0" marginwidth="0" title="RSVP"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </section>
+    <section id="location">
+      <h2>Location / Travel<a href="#">↑</a></h2>
+      <div class="content">
+        <div>
+          <h3>Places to Stay</h3>
+          <ul>
+            <li><a href="">La Quinta Inn & Suites</a> (10 min drive)</li>
+            <li><a href="">River Forest Inn</a> (13 min drive)</li>
+            <li><a href="">Best Western Inn & Suites</a> (16 min drive)</li>
+            <li><a href="">Hilton Garden Inn Temple Med Center</a> (20 min drive)</li>
+            <li><a href="">Holiday Inn</a> (20 min drive)</li>
+          </ul>
+        </div>
+        <div id="map" style="max-width:100%;list-style:none; transition: none;overflow:hidden;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=screaming+goat+funny+farm&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><style>#google-maps-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+      </div>
+    </section>
+    <section id="dress">
+      <h2>Dress Code<a href="#">↑</a></h2>
+        <div id="color-pallet">
+          <div style="background-color: #CEDEC4;"></div>
+          <div style="background-color: #B5CBDC;"></div>
+          <div style="background-color: #001232;"></div>
+          <div style="background-color: #270130;"></div>
+          <div style="background-color: #48090A;"></div>
+          <div style="background-color: #DE7338;"></div>
+        </div>
+      <p>Hello! The dress code will be “country” formal. We have listed some pictures that fit with in the dress code. Jeans are acceptable but please no t-shirts or neon colors. The color palette is also above if you are trying to decide which colors to wear! Please wear shoes on the more comfortable side as the terrain is rough in some spots. Of course if you have a questions feel free to reach out!</p>
+      <div class="gallery" id="dress-gallery">
+        <button onclick="dressGallery.previous()">←</button>
+        <div class="gallery-images">
+          <img src="./media/dress/IMG_1.jpeg" alt="">
+          <img src="./media/dress/IMG_2.jpeg" class="selected" alt="">
+          <img src="./media/dress/IMG_3.jpeg" alt="">
+          <img src="./media/dress/IMG_4.jpeg" alt="">
+          <img src="./media/dress/IMG_5.jpeg" alt="">
+          <img src="./media/dress/IMG_6.jpeg" alt="">
+          <img src="./media/dress/IMG_7.jpeg" alt="">
+          <img src="./media/dress/IMG_8.jpeg" alt="">
+          <img src="./media/dress/IMG_9.jpeg" alt="">
+          <img src="./media/dress/IMG_10.jpeg" alt="">
+        </div>
+        <button onclick="dressGallery.next()">→</button>
+      </div>
+    </section>
+    <section id="registry">
+      <h2>Registry<a href="#">↑</a></h2>
+    </section>
+<script src="./script.js" defer></script>
+</body>
+</html>
