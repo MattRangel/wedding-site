@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title></title>
+</head>
+<body>
+  <main>
+    <h2>Dress Code</h2>
+      <div id="color-pallet">
+        <div style="background-color: #CEDEC4;"></div>
+        <div style="background-color: #B5CBDC;"></div>
+        <div style="background-color: #001232;"></div>
+        <div style="background-color: #270130;"></div>
+        <div style="background-color: #48090A;"></div>
+        <div style="background-color: #DE7338;"></div>
+      </div>
+    <p>Hello! The dress code will be “country” formal. We have listed some pictures that fit with in the dress code. Jeans are acceptable but please no t-shirts or neon colors. The color palette is also above if you are trying to decide which colors to wear! Please wear shoes on the more comfortable side as the terrain is rough in some spots. Of course if you have a questions feel free to reach out!</p>
+    <div class="gallery" id="dress-gallery">
+      <button onclick="dressGallery.previous()">←</button>
+      <div class="gallery-images">
+        <img src="./media/dress/IMG_1.jpeg" alt="">
+        <img src="./media/dress/IMG_2.jpeg" class="selected" alt="">
+        <img src="./media/dress/IMG_3.jpeg" alt="">
+        <img src="./media/dress/IMG_4.jpeg" alt="">
+        <img src="./media/dress/IMG_5.jpeg" alt="">
+        <img src="./media/dress/IMG_6.jpeg" alt="">
+        <img src="./media/dress/IMG_7.jpeg" alt="">
+        <img src="./media/dress/IMG_8.jpeg" alt="">
+        <img src="./media/dress/IMG_9.jpeg" alt="">
+        <img src="./media/dress/IMG_10.jpeg" alt="">
+      </div>
+      <button onclick="dressGallery.next()">→</button>
+    </div>
+  </main>
+<script src="./scripts/Gallery.js" defer></script>
+</body>
+</html>
