@@ -60,17 +60,17 @@ a {
 
 #tabs a {
   text-decoration: none;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   cursor: pointer;
 }
 
 #tabs a:hover {
-  border-bottom: solid black .1rem;
+  border-bottom: solid black 0.1rem;
   font-weight: 500;
 }
 
 #tabs a:active {
-  border-bottom: solid black .15rem;
+  border-bottom: solid black 0.15rem;
   font-weight: bold;
 }
 
@@ -92,9 +92,9 @@ h2 {
   display: grid;
   grid-template-columns: repeat(6, 7rem);
   justify-content: center;
-  margin: .5rem auto;
+  margin: 0.5rem auto;
   width: min-content;
-  outline: solid white .3rem;
+  outline: solid white 0.3rem;
 }
 
 @media (orientation: portrait) or (max-width: 43rem) {
@@ -118,7 +118,7 @@ h2 {
   max-width: 90vw;
 }
 
-.gallery  .selected {
+.gallery .selected {
   display: inline-block;
 }
 
@@ -132,7 +132,7 @@ h2 {
   min-height: 14rem;
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 25rem) {
   .gallery {
     grid-template-columns: unset;
   }
@@ -158,4 +158,3 @@ h2 {
     height: 60vh;
   }
 }
-
