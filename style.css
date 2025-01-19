@@ -2,70 +2,50 @@
   font-family: "Liberation Serif";
   src: url("./fonts/liberation-serif/LiberationSerif-Regular.ttf");
 }
-
 html {
-  scroll-snap-type: y proximity;
+  display: flex;
+  justify-content: center;
 }
 
 body {
-  --header-height: 5rem;
-}
-
-body {
-  margin: 8px 0;
+  max-width: 60rem;
+  margin: 1rem 2rem;
   font-family: "Liberation Serif", serif;
   font-size: 1.2rem;
-  background-color: #a4bbff;
-}
-
-body::before {
-  display: inline-block;
-  content: "\00a0";
-  scroll-snap-align: start;
-  position: absolute;
+  background-color: #fff8e3;
+  width: 100%;
 }
 
 h1 {
   text-align: center;
   font-variant-caps: small-caps;
-  top: 0;
 }
 
-section {
-  margin: 0 2vw;
-  min-height: 100vh;
-  scroll-snap-align: start;
-  border-image: url('/media/Border1.svg');
+#rsvp {
+  background-color: #e3f8ff;
 }
 
-@media (orientation: landscape) and (min-height: 37.5rem) {
-  h1, #tabs {
-    position: sticky;
-    background-color: inherit;
-    width: 100vw;
-  }
-
-  header {
-    position: sticky;
-    top: calc((100vh - var(--header-height)) * -1);
-  }
-
-  section {
-    padding-top: var(--header-height);
-  }
+#rsvp h2 {
+  margin-bottom: 0;
 }
 
-header {
-  background-color: inherit;
-  min-height: 100vh;
+a {
+  color: inherit;
+}
+
+#homepage main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#header-image {
+#homepage img {
   height: 15rem;
+}
+
+#homepage p {
+  max-width: 40rem;
 }
 
 #tabs {
@@ -80,7 +60,6 @@ header {
 
 #tabs a {
   text-decoration: none;
-  color: black;
   padding: 0 .5rem;
   cursor: pointer;
 }
@@ -96,15 +75,17 @@ header {
 }
 
 h2 {
-  margin: 0;
+  margin: 1.5rem 0;
+  font-size: 2.2rem;
   font-variant-caps: small-caps;
 }
 
-h2 > a {
-  float: right;
+.home-link {
+  font-size: inherit;
   text-decoration: none;
   cursor: pointer;
   color: inherit;
+  margin-right: 1rem;
 }
 
 #color-pallet {
@@ -141,15 +122,12 @@ h2 > a {
   display: inline-block;
 }
 
-.gallery button {
-  font-size: 2.5rem;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: 5rem 10rem 5rem;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   gap: 1rem;
   min-height: 14rem;
 }
@@ -161,23 +139,23 @@ h2 > a {
 }
 
 .gallery button {
+  font-size: 2.5rem;
+  color: inherit;
   background: none;
   border: none;
+  touch-action: manipulation;
 }
 
 .gallery button:hover {
   cursor: pointer;
 }
 
-#location .content {
-  display: flex;
-  flex-wrap: wrap;
+@media (min-width: 47rem) {
+  #location #map {
+    float: right;
+    margin: 1rem;
+    aspect-ratio: 1/1;
+    height: 60vh;
+  }
 }
 
-#location .content > * {
-  flex: 1 0 15rem;
-}
-
-#map {
-  min-height: 20rem;
-}
