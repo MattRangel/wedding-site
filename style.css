@@ -158,3 +158,16 @@ h2 {
     height: 60vh;
   }
 }
+
+#us .content {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#us .content > img {
+  flex: 1;
+  max-width: 15rem;
+  object-fit: contain;
+}
